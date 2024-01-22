@@ -1,0 +1,123 @@
+/*
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⢸⣿⣿⣿⡀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⡀⡀⢸⣿⣿⣿⡀⡀⡀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠋⡀⡀⡀⡀⢸⣿⣿⣿⡀⡀⡀⡀⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⡀⡀⡀⡀⡀⡀⢸⣿⣿⣿⡀⡀⡀⡀⡀⡀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⡀⡀⡀⡀⡀⡀⡀⢸⣿⣿⣿⡀⡀⡀⡀⡀⡀⡀⡀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⡀⡀⡀⡀⢀⡆⡀⡀⡀⢸⣿⣿⣿⡀⡀⡀⡀⣆⡀⡀⡀⡀⡀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠋⡀⡀⡀⡀⡀⣴⣿⡇⡀⡀⡀⢸⣿⠈⠛⡀⡀⡀⡀⣿⣿⣄⡀⡀⡀⡀⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⠟⡀⡀⡀⡀⡀⣠⣿⣿⣿⡇⡀⡀⡀⢸⣿⡀⡀⡀⡀⡀⡀⣿⣿⣿⣷⡀⡀⡀⡀⡀⠙⢿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⠟⠁⡀⡀⡀⡀⣠⣾⣿⣿⣿⣿⡇⡀⡀⡀⢸⣿⡀⡀⡀⡀⡀⡀⣿⣿⣿⣿⣿⣦⡀⡀⡀⡀⡀⠙⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⡿⠁⡀⡀⡀⡀⢀⣾⣿⣿⣿⣿⣿⣿⡇⡀⡀⡀⢸⣿⣷⡀⡀⡀⡀⡀⣿⣿⣿⣿⣿⣿⣿⣤⡀⡀⡀⡀⡀⠻⣿⣿⣿⣿
+⣿⣿⣿⠋⡀⡀⡀⡀⡀⣴⣿⣿⣿⣿⣿⣿⣿⣿⡇⡀⡀⡀⡀⠙⣿⣿⣦⡀⡀⡀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣄⡀⡀⡀⡀⠈⢿⣿⣿
+⣿⠟⡀⡀⡀⡀⡀⣠⣿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣿⣄⡀⡀⡀⡀⡀⠻⣿⣿⣄⡀⣿⣿⣿⣿⠻⣿⣿⣿⣿⣿⣷⡀⡀⡀⡀⡀⠈⢿
+⣿⣄⡀⡀⡀⡀⡀⠻⣿⣿⣿⣿⠋⡀⣿⣿⣿⣿⡿⣿⣿⣄⡀⡀⡀⡀⠈⠻⣿⣷⣿⣿⣿⣿⡀⠈⢿⣿⣿⣿⡿⠉⡀⡀⡀⡀⢀⣾
+⣿⣿⣷⡀⡀⡀⡀⡀⠈⢿⠟⡀⡀⡀⣿⣿⣿⣿⡇⠈⢿⣿⣷⡀⡀⡀⡀⡀⠈⢿⣿⣿⣿⣿⡀⡀⡀⠙⣿⠋⡀⡀⡀⡀⡀⣴⣿⣿
+⣿⣿⣿⣿⣷⡀⡀⡀⡀⡀⡀⡀⡀⡀⣿⣿⣿⣿⡇⡀⡀⠙⣿⣿⣦⡀⡀⡀⡀⡀⣿⣿⣿⣿⡀⡀⡀⡀⡀⡀⡀⡀⡀⣴⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣦⡀⡀⡀⡀⡀⢀⣾⣿⣿⣿⣿⡇⡀⡀⡀⡀⠻⣿⣿⡀⡀⡀⡀⣿⣿⣿⣿⣿⣄⡀⡀⡀⡀⡀⣠⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣄⡀⢀⣴⣿⣿⣿⣿⣿⣿⡇⡀⡀⡀⡀⡀⣿⣿⡀⡀⡀⡀⣿⣿⣿⣿⣿⣿⣿⣄⡀⢀⣾⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿⡇⡀⡀⡀⡀⡀⣿⣿⡀⡀⡀⡀⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⡀⡀⡀⢠⡀⣿⣿⡀⡀⡀⡀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⡀⡀⡀⢸⣿⣿⣿⡀⡀⡀⡀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⡀⡀⡀⢸⣿⣿⣿⡀⡀⡀⡀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⡀⡀⡀⢸⣿⣿⣿⡀⡀⡀⡀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⡀⡀⢸⣿⣿⣿⡀⡀⡀⣤⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⢸⣿⣿⣿⡀⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+*/
+:root {
+  --primary-color: #F06BBC;
+  --secondary-color: #EEF3D3;
+  --tercary-color: #FFD51F;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0px;
+  background-image: url(bg.jpg);
+  background-size: cover;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: 'Simpsonfont';
+  src: url('Simpsonfont.otf') format('woff'),
+}
+
+.police{
+  font-family: 'Simpsonfont', sans-serif;
+  color: var(--primary-color);
+  font-size: 75px; 
+  text-shadow: -4px 4px 0 var(--secondary-color), 
+                4px 4px 0 var(--secondary-color), 
+               4px -4px 0 var(--secondary-color), 
+              -4px -4px 0 var(--secondary-color); 
+} 
+
+.plateau {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+}
+
+.case {
+  width: 150px;
+  height: 150px;
+  border: 5px solid var(--secondary-color);
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.case:hover {
+  width: 150px;
+  height: 150px;
+  transition: 0.5s;
+  border: 5px solid var(--secondary-color);
+  background-color: var(--tercary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.bouton {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.bouton:hover {
+  padding: 10px 20px;
+  background-color: var(--secondary-color);
+  transition: 0.5s;
+  color: var(--primary-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.imagecentre {
+    display: block;
+    margin: auto;
+    width: 85%;
+    height: 85%; 
+  }
+  
