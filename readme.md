@@ -20,7 +20,7 @@ Tic Tac Doh est une version du célèbre jeu du "Morpion" sous le thème des Sim
 
 ## Installation
 
-1. Clonez le dépôt : `git clone https://github.com/votre-nom-utilisateur/tic-tac-doh.git`
+1. Clonez le dépôt : `git clone https://github.com/SpliiT/tic-tac-doh.git`
 2. Ouvrez le fichier `index.html` dans votre navigateur web préféré.
 
 ## Utilisation
