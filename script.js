@@ -237,7 +237,7 @@ function trouverCoupBloquant() {
 
 // Fonction pour trouver un coin disponible
 function trouverCoinDisponible() {
-  let coins = [0, 2, 6, 8];
+  let coins = [4, 0, 2, 6, 8];
   for (let i = 0; i < coins.length; i++) {
     if (etatJeu[coins[i]] === '') {
       return coins[i];
