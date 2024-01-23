@@ -119,6 +119,7 @@ body {
     margin: auto;
     width: 85%;
     height: 85%; 
+    border-radius: 15px;
   }
 
   label {
