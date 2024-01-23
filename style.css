@@ -137,10 +137,7 @@ body {
     color: var(--secondary-color);
     margin-right: 10px;
   }
-  select {
-    border-color: #ff0000;
-  }
-  
+
   #mode {
     font-size: 16px;
     padding: 8px;
