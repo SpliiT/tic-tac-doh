@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-<!--
+  <!--
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⢸⣿⣿⣿⡀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⡀⡀⢸⣿⣿⣿⡀⡀⡀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
@@ -28,44 +28,66 @@
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⢸⣿⣿⣿⡀⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
-  <link rel="stylesheet" href="style.css">
-  <title>Tic Tac D'oh !</title>
-</head>
-<body>
-  <audio autoplay>
-    <source src="sound.mp3" type="audio/mp3">
-  </audio>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+      <link rel="stylesheet" href="style.css" />
+      <title>Tic Tac D'oh !</title>
+    </head>
+    <body>
+      <audio autoplay>
+        <source src="sound.mp3" type="audio/mp3" />
+      </audio>
 
-  <div>
-    <label for="mode" class="mode-de-jeu">Modes de jeu :</label>
-    <select id="mode" onchange="changerModeJeu(this.value)">
-       <option value="joueur">Joueur contre Joueur</option>
-       <option value="ordinateur">Joueur contre Ordinateur (Random)</option>
-       <option value="ordinateurPro">Joueur contre Ordinateur (Pro)</option>
-      </select>
-      
-  </div>
+      <div>
+        <label for="mode" class="mode-de-jeu">Modes de jeu :</label>
+        <select id="mode" onchange="changerModeJeu(this.value)">
+          <option value="joueur">Joueur contre Joueur</option>
+          <option value="ordinateur">Joueur contre Ordinateur (Random)</option>
+          <option value="ordinateurPro">Joueur contre Ordinateur (Pro)</option>
+        </select>
+      </div>
 
-  <h1 class="police">Tic Tac <img src="doh.png" alt="doh" style="width: 165px; height: 150px;" > </h1>
+      <h1 class="police">
+        Tic Tac
+        <img src="doh.png" alt="doh" style="width: 165px; height: 150px" />
+      </h1>
 
-  <button class="bouton" onClick="window.location.reload();">Rejouer</button>
-  <div class="plateau" id="plateau">
-    <div class="case"></div>
-    <div class="case"></div>
-    <div class="case"></div>
-    <div class="case"></div>
-    <div class="case"></div>
-    <div class="case"></div>
-    <div class="case"></div>
-    <div class="case"></div>
-    <div class="case"></div>
-  </div>
-  <script src="script.js"></script>
-</body>
+      <button class="bouton" onClick="window.location.reload();">
+        Rejouer
+      </button>
+      <div class="plateau" id="plateau">
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+        <div class="case"></div>
+      </div>
+      <footer>
+         
+        <p style="   text-shadow: -0.7px 0.7px 0 var(--primary-color), 
+        0.7px 0.7px 0 var(--primary-color), 
+       0.7px -0.7px 0 var(--primary-color), 
+      -0.7px -0.7px 0 var(--primary-color); color: #EEF3D3; font-weight: bold; font-size: 22px">
+          © 2024 - Designed and coded by
+          <a
+            href="https://spliitdev.com"
+            target="_blank"
+            style="text-decoration: none; color: #EEF3D3"
+            >SpliiT Dev</a
+          ><a href="https://github.com/SpliiT" target="_blank"
+            ><img src="github.png" style="width: 50px; height: 50px; margin-left:15px; display: inline-block; vertical-align: middle;">
+        </a>
+        </p>
+      </footer>
+      <script src="script.js"></script>
+    </body>
+  </html>
 </html>

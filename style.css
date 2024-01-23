@@ -32,6 +32,16 @@
   --tercary-color: #FFD51F;
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: var(--primary-color);
+  background: var(--tercary-color);
+}
+
+::selection {
+  color: var(--primary-color);
+  background: var(--tercary-color);
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -61,12 +71,12 @@ body {
 
 .plateau {
   display: grid;
-  grid-template-columns: repeat(3, 150px);
+  grid-template-columns: repeat(3, 15vh);
 }
 
 .case {
-  width: 150px;
-  height: 150px;
+  width: 15vh;
+  height: 15vh;
   border: 5px solid var(--secondary-color);
   background-color: var(--primary-color);
   display: flex;
@@ -77,8 +87,8 @@ body {
 }
 
 .case:hover {
-  width: 150px;
-  height: 150px;
+  width: 15vh;
+  height: 15vh;
   transition: 0.5s;
   border: 5px solid var(--secondary-color);
   background-color: var(--tercary-color);
@@ -126,6 +136,9 @@ body {
     font-size: 18px;
     color: var(--secondary-color);
     margin-right: 10px;
+  }
+  select {
+    border-color: #ff0000;
   }
   
   #mode {
