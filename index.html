@@ -28,6 +28,8 @@
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⢸⣿⣿⣿⡀⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +43,17 @@
     Votre navigateur ne supporte pas l'élément audio.
   </audio>
 
-  <h1 class="police">Tic Tac <img src="doh.png" alt="doh" style="margin-top: 2px;"> </h1>
+  <div>
+    <label for="mode" class="mode-de-jeu">Mode de jeu :</label>
+    <select id="mode" onchange="changerModeJeu(this.value)">
+        <option value="joueur">Joueur contre Joueur</option>
+        <option value="ordinateur">Joueur contre Ordinateur</option>
+        <option value="ordinateurPro">Joueur contre Ordinateur Pro</option>
+      </select>
+      
+  </div>
+
+  <h1 class="police">Tic Tac <img src="doh.png" alt="doh" style="width: 165px; height: 150px;" > </h1>
 
   <button class="bouton" onClick="window.location.reload();">Rejouer</button>
   <div class="plateau" id="plateau">
