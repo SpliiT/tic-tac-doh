@@ -29,17 +29,7 @@
 :root {
   --primary-color: #F06BBC;
   --secondary-color: #EEF3D3;
-  --tercary-color: #FFD51F;
-}
-
-::-moz-selection { /* Code for Firefox */
-  color: var(--primary-color);
-  background: var(--tercary-color);
-}
-
-::selection {
-  color: var(--primary-color);
-  background: var(--tercary-color);
+  --tertiary-color: #FFD51F;
 }
 
 body {
@@ -48,26 +38,38 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0px;
+  margin: 0;
   background-image: url(bg.jpg);
   background-size: cover;
   overflow: hidden;
 }
 
-@font-face {
-  font-family: 'Simpsonfont';
-  src: url('Simpsonfont.otf') format('woff'),
+body,
+html {
+  margin: 0;
+  padding: 0;
 }
 
-.police{
+/* Ajoutez ces règles pour rendre les images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@font-face {
+  font-family: 'Simpsonfont';
+  src: url('Simpsonfont.otf') format('woff');
+}
+
+.police {
   font-family: 'Simpsonfont', sans-serif;
   color: var(--primary-color);
-  font-size: 50px; 
-  text-shadow: -3px 3px 0 var(--secondary-color), 
-                3px 3px 0 var(--secondary-color), 
-               3px -3px 0 var(--secondary-color), 
-              -3px -3px 0 var(--secondary-color); 
-} 
+  font-size: 50px;
+  text-shadow: -3px 3px 0 var(--secondary-color),
+    3px 3px 0 var(--secondary-color),
+    3px -3px 0 var(--secondary-color),
+    -3px -3px 0 var(--secondary-color);
+}
 
 .plateau {
   display: grid;
@@ -91,7 +93,7 @@ body {
   height: 15vh;
   transition: 0.5s;
   border: 5px solid var(--secondary-color);
-  background-color: var(--tercary-color);
+  background-color: var(--tertiary-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,7 +110,7 @@ body {
   font-size: 16px;
   cursor: pointer;
   margin-bottom: 20px;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .bouton:hover {
@@ -121,39 +123,83 @@ body {
   font-size: 16px;
   cursor: pointer;
   margin-bottom: 20px;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .imagecentre {
-    display: block;
-    margin: auto;
-    width: 85%;
-    height: 85%; 
-    border-radius: 15px;
+  display: block;
+  margin: auto;
+  width: 85%;
+  height: 85%;
+  border-radius: 15px;
+}
+
+label {
+  font-size: 18px;
+  color: var(--secondary-color);
+  margin-right: 10px;
+}
+
+#mode {
+  font-size: 16px;
+  padding: 8px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.mode-de-jeu {
+  font-family: 'Simpsonfont', sans-serif;
+  color: var(--primary-color);
+  font-size: 30px;
+  text-shadow: -1px 1px 0 var(--secondary-color),
+    1px 1px 0 var(--secondary-color),
+    1px -1px 0 var(--secondary-color),
+    -1px -1px 0 var(--secondary-color);
+}
+
+.resultat-container img {
+  width: 70%;
+  height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Styles pour les écrans de petite taille */
+  body {
+    background-size: contain;
   }
 
-  label {
+  .plateau {
+    grid-template-columns: repeat(3, 30vw);
+  }
+
+  .case {
+    width: 30vw;
+    height: 30vw;
+    font-size: 16px;
+  }
+
+  .police {
+    font-size: 30px;
+  }
+
+  .mode-de-jeu {
     font-size: 18px;
-    color: var(--secondary-color);
-    margin-right: 10px;
   }
 
   #mode {
-    font-size: 16px;
-    padding: 8px;
-    border: 2px solid var(--secondary-color);
-    border-radius: 5px;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    cursor: pointer;
+    font-size: 14px;
+    padding: 6px;
   }
 
-  .mode-de-jeu{
-    font-family: 'Simpsonfont', sans-serif;
-    color: var(--primary-color);
-    font-size: 30px; 
-    text-shadow: -1px 1px 0 var(--secondary-color), 
-    1px 1px 0 var(--secondary-color), 
-   1px -1px 0 var(--secondary-color), 
-  -1px -1px 0 var(--secondary-color); 
-  } 
+  .mode-de-jeu {
+    font-size: 20px;
+  }
+
+  .resultat-container img {
+    width: 70%;
+    height: auto;
+  }
+}
