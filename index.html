@@ -33,7 +33,10 @@
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="Tic Tac D'oh : Jeu du morpion sur le thème des Simpsons. Développé par SpliiT Dev">
+      <meta
+        name="description"
+        content="Tic Tac D'oh : Jeu du morpion sur le thème des Simpsons. Développé par SpliiT Dev"
+      />
       <link rel="shortcut icon" type="image/png" href="/favicon.png" />
       <link rel="stylesheet" href="style.css" />
       <title>Tic Tac D'oh!</title>
@@ -46,9 +49,9 @@
       <div>
         <label for="mode" class="mode-de-jeu">Modes de jeu :</label>
         <select id="mode" onchange="changerModeJeu(this.value)">
+          <option value="ordinateurPro">Joueur contre Ordinateur (Pro)</option>
           <option value="joueur">Joueur contre Joueur</option>
           <option value="ordinateur">Joueur contre Ordinateur (Random)</option>
-          <option value="ordinateurPro">Joueur contre Ordinateur (Pro)</option>
         </select>
       </div>
 
@@ -73,19 +76,35 @@
       </div>
       <footer>
          
-        <p style="   text-shadow: -0.7px 0.7px 0 var(--primary-color), 
-        0.7px 0.7px 0 var(--primary-color), 
-       0.7px -0.7px 0 var(--primary-color), 
-      -0.7px -0.7px 0 var(--primary-color); color: #EEF3D3; font-weight: bold; font-size: 22px">
+        <p
+          style="
+            text-shadow: -0.7px 0.7px 0 var(--primary-color),
+              0.7px 0.7px 0 var(--primary-color),
+              0.7px -0.7px 0 var(--primary-color),
+              -0.7px -0.7px 0 var(--primary-color);
+            color: #eef3d3;
+            font-weight: bold;
+            font-size: 22px;
+          "
+        >
           © 2024 - Designed and coded by
           <a
             href="https://spliitdev.com"
             target="_blank"
-            style="text-decoration: none; color: #EEF3D3"
+            style="text-decoration: none; color: #eef3d3"
             >SpliiT Dev</a
           ><a href="https://github.com/SpliiT/tic-tac-doh" target="_blank"
-            ><img src="github.png" style="width: 50px; height: 50px; margin-left:15px; display: inline-block; vertical-align: middle;">
-        </a>
+            ><img
+              src="github.png"
+              style="
+                width: 50px;
+                height: 50px;
+                margin-left: 15px;
+                display: inline-block;
+                vertical-align: middle;
+              "
+            />
+          </a>
         </p>
       </footer>
       <script src="script.js"></script>
